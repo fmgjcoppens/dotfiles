@@ -1,0 +1,26 @@
+[user]
+	email = mail@fmgjcoppens.eu
+	name = François Coppens
+
+[core]
+  editor = nvim
+
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+
+[status]
+	showUntrackedFiles = no
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+	required = true
+[safe]
+	directory = /
